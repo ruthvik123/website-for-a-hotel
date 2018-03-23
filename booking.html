@@ -1,0 +1,258 @@
+<html>
+<head>
+    
+    <title>BOOKING</title>
+</head>
+<style>
+body{
+background-image:url("img2.jpg");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+		background-size:1550px 750px;
+}
+#wrap{
+	width:400px;
+	margin:0 auto;
+	text-align:left;
+	margin-top:8px;
+	padding:5px;
+	color:white;
+	background: rgba(0,0,255,0.4); 
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+	font-size:13px;    
+    line-height:16px;
+}
+#wrap .cont_details fieldset,.cont_order fieldset{
+	margin:10px;
+	padding:20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}
+#wrap legend{
+	font-size:16px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#000;
+	font-weight:bold;
+	font-style:italic;
+    padding-bottom:10px;
+}
+#wrap .cont_details input{
+	margin-bottom:10px;
+	color:#000;
+}
+#wrap .input1:hover,.input1:active{
+	
+}
+#wrap label{
+	display:block;
+	font-size:12px;
+	color:white;
+    font-weight:bold;
+}
+#wrap label.inlinelabel
+{
+    display:inline;
+}
+#wrap .cont_order input{
+	margin-bottom:5px;
+}
+#wrap .cont_order p{
+	padding-top:5px;
+	color:white;
+}
+
+#wrap input[type="radio"]
+{
+margin-top:8px;
+margin-bottom:8px;
+}
+
+#wrap input[type="text"]:hover,
+#wrap input[type="text"]:active {
+background-color: #FAF398;
+}
+
+#wrap input#submit
+{
+margin:10px;
+padding-left:20px;
+padding-right:20px;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+#wrap div#totalPrice
+{
+    padding:10px;
+    font-weight:bold;
+    background-color:#ff0;
+}
+
+#wrap label.radiolabel
+{
+font-weight:normal;
+ display:inline;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+	}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+<div style="height:35px;width:100%;">
+		<ul>
+			<li><a href="usermain.html">Home</a></li>
+<!--			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">INSERTION</a>
+				<div class="dropdown-content">
+				<a href="">Employee</a>
+				<a href="">Room Details</a>
+				</div>
+			</li>
+-->			
+			<li><a href="">BANQUET HALL</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">ROOM BOOKING</a>
+				<div class="dropdown-content">
+				<a href="booking.html">BOOKING</a>
+				<a href="room_details.html">ROOMS and SUITES</a>
+				
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">FEEDBACK</a>
+				<div class="dropdown-content">
+				<a href="feedback.html">Give Feedback</a>
+				
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">DETAILS</a>
+				<div class="dropdown-content">
+				<a href="emptable.php">Employee Details</a>
+				<a href="">User Details</a>
+				
+				</div>
+			</li>
+			<li style="float:right"><a class="active" href="main.html">Logout</a></li>
+		</ul> 
+</div>
+<body onload='hideTotal()'>
+    <div id="wrap">
+       <form action="bookingdetail.php" method="GET" oninput="x1.value=parseInt(a.value)*1500;x2.value=parseInt(b.value)*1750;x3.value=parseInt(c.value)*2400;x4.value=parseInt(d.value)*3000;x5.value=parseInt(e.value)*6000;x6.value=parseInt(f.value)*9500;x7.value=parseInt(g.value)*12000;x8.value=parseInt(h.value)*15000;x9.value=parseInt(i.value)*17000;">
+		<div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>Select Your Rooms!</legend>
+                <label >Number of rooms</label>
+				<br>
+
+				<input type="number" id="a" value="">CLASSIC ROOM(MAX 2 PERSONS)
+				=<output name="x1" for="a b"></output>	
+<br>
+                <input type="number" id="b" value="">CLASSIC ROOMS WITH VIEW(MAX 2)
+				<br>=<output name="x2" for="a b"></output>
+<br>				
+                <input type="number" id="c" value="">PRESTIGE ROOM
+				<br>=<output name="x3" for="a b"></output>
+<br>
+                <input type="number" id="d" value="">JUNIOR SUITE
+				<br>=<output name="x4" for="a b"></output>
+<br>
+                <input type="number" id="e" value="">CLASSIC SUITE
+				<br>=<output name="x5" for="a b"></output>
+<br>
+                <input type="number" id="f" value="">PRESTIGE SUITE
+				<br>=<output name="x6" for="a b"></output>
+<br>
+                <input type="number" id="g" value="">TERRACE SUITE
+				<br>=<output name="x7" for="a b"></output>
+<br>
+                <input type="number" id="h" value="">PRESIDENTIAL SUITE
+				<br>=<output name="x8" for="a b"></output>
+<br>
+                <input type="number" id="i" value="">PENTHOUSE SUITE
+				<br>=<output name="x9" for="a b"></output>
+<br>
+                <br/>
+				<button onclick="calculateTotal()">Calculate</button>
+				<!--<div id="totalPrice"></div>-->
+                
+                </fieldset>
+            </div>
+            
+        	<div class="cont_details">
+            	<fieldset>
+                <legend>Contact Details</legend>
+                <label for='name'>Name</label>
+                <input type="text" id="name" name='name' />
+                <br/>
+                <label for='address'>Address</label>
+                <input type="text" id="address" name='address' />
+                <br/>
+                <label for='phoneno'>Phone Number</label>
+                <input type="text"  id="phoneno" name='phoneno'/>
+                <br/>
+				<label for='phoneno'>Check in Date</label>
+				<input class="details"   type="date" name="checkin" placeholder="Check in Date" ></input>
+				<label for='phoneno'>Check out Date</label>
+				<input class="details"   type="date" name="checkout" placeholder="Check out Date"></input>
+                </fieldset>
+            </div>
+            <input type='submit' id='submit' value='Submit'/>
+        </div>  
+      </form>
+	</div><!--End of wrap-->
+
+</body>
+</html>

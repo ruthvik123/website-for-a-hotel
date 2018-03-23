@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+margin:;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+background-color:black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+	}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ 
+</style>
+</head>
+<body>
+<div style="height:35px;width:100%;">
+		<ul>
+			<li><a href="usermain.html">HOME</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">BOOKING</a>
+				<div class="dropdown-content">
+				<a href="hotelafterlogin.php">ROOM BOOKING</a>
+				<a href="hall.html">HALL BOOKING</a>
+				<a href="vehicles.php">CAB BOOKING</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">FEEDBACK</a>
+				<div class="dropdown-content">
+				<a href="feedback.html">Give Feedback</a>
+				
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">DETAILS</a>
+				<div class="dropdown-content">
+				<a href="tariff.php">TARIFF DETAILS</a>
+				<a href="roomdetails.html">ROOM DETAILS</a>
+				</div>
+			</li>
+			
+			<li style="float:right"><a class="active" href="main.html">Logout</a></li>
+		</ul> 
+</div>
+<div id="d1">
+<div class="outerbox">
+<h2 style=" color: black; " align="center"> FEEDBACK FORM</h2>
+<form action="feedback.php" method="GET">
+
+
+
+<div id="dd" align="center">ROOM TYPE <span style="display:inline-block; width: 70px;"></span><select name="roomtype" >
+<option value="JACK NON AC">JACK NON AC</option>
+<option value="JACK AC">JACK AC</option>
+<option value="KING">KING</option>
+<option value="QUEEN">QUEEN</option>
+</select> </div><br/>
+
+ 
+ 
+
+<div id="dd" align="center" >RESTAURANT: <span style="display:inline-block; width: 50px;"></span> <select name="restaurant" >
+<option value="Excellent">Excellent</option>
+<option value="Good">Good</option>
+<option value="Fair">Fair</option>
+<option value="Poor">Poor</option>
+</select> </div><br/>
+ 
+ 
+<div id="dd" align="center" >STAFF: <span style="display:inline-block; width: 110px;"></span> <select name="staff"  >
+ 
+<option value="Excellent">Excellent</option>
+<option value="Good">Good</option>
+<option value="Fair">Fair</option>
+<option value="Poor">Poor</option>
+</select> </div><br/>
+ 
+
+<div id="dd" align="center">HOUSEKEEPING: <span style="display:inline-block; width: 32px;"></span> <select name="housekeeping" >
+<option value="Excellent">Excellent</option>
+<option value="Good">Good</option>
+<option value="Fair">Fair</option>
+<option value="Poor">Poor</option>
+</select> </div><br/>
+
+<div id="dd" align="center">CLEANLINESS: <span style="display:inline-block; width: 47px;"></span><select name="cleanliness" >
+<option value="Excellent">Excellent</option>
+<option value="Good">Good</option>
+<option value="Fair">Fair</option>
+<option value="Poor">Poor</option>
+</select></div><br/>
+ 
+<div id="dd" align="center">OVERALLRATING:<span style="display:inline-block; width: 20px;"></span> <select name="overallrating" >
+<option value="Excellent">Excellent</option>
+<option value="Good">Good</option>
+<option value="Fair">Fair</option>
+<option value="Poor">Poor</option>
+</select></div><br>
+ 
+ 
+<div id="dd" align="center">MOBILE NUMBER:<span style="display:inline-block; width: 20px;"></span><input type="text" name="mobileno" placeholder="Mobil number" pattern="[0-9]{10}" required  ><br>
+ <div align="center">
+<textarea placeholder="Remarks" name="remarks" rows="3" style=" margin-top: 10px; margin-bottom: 15px; border:2px solid black; text-align:left;x padding-right: 2px; font-weight: bold; width: 50%; "></textarea><br>
+</div>
+<br> 
+
+<br>
+
+<input type = "submit" value="Give Feedback" id="last" style="color:white;background-color:black;width:140px;height:40px;"></input>
+</form>
+ 
+</div>
+</div>
+</body>
+</html>
